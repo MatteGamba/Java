@@ -1,12 +1,13 @@
 package Model;
 
-public class Rettangolo {
+public class Rettangolo extends Figura {
 
 	private Segmento base, altezza;
 
 	public Rettangolo(Segmento base, Segmento altezza) {
 		this.base = base;
 		this.altezza = altezza;
+		this.nome = "Rettangolo";
 	}
 	
 	public double perimetro() {

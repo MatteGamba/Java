@@ -1,6 +1,6 @@
 package Model;
 
-public class Triangolo {
+public class Triangolo extends Figura {
 
 	private Punto a, b, c;
 	private Segmento ab, ac, bc;
@@ -13,6 +13,9 @@ public class Triangolo {
 		this.ab = new Segmento(a, b);
 		this.ac = new Segmento(a, c);
 		this.bc = new Segmento(b, c);
+		
+		this.nome = "Triangolo";
+		
 	}
 	
 	public double perimetro() {
