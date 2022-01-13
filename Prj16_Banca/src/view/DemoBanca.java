@@ -10,8 +10,7 @@ public class DemoBanca {
 
 		GestioneConto gc = new GestioneConto();
 		
-		gc.addCliente("Christian", "De La Fuente", 22);
-		gc.addCliente("Christian", "De La Fuente", 22);
+		gc.addCliente("Christian", "De La Fuente", "1999-05-31");
 		
 		Cliente c = gc.getCliente("Christian", "De La Fuente");
 		

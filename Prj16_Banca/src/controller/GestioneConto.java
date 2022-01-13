@@ -11,8 +11,8 @@ public class GestioneConto {
 		DB.getConti().add(cc);
 	}
 	
-	public void addCliente(String nome, String cognome, int eta) {
-		Cliente c = new Cliente(nome, cognome, eta);
+	public void addCliente(String nome, String cognome, String data) {
+		Cliente c = new Cliente(nome, cognome, data);
 		DB.getClienti().add(c);
 	}
 	

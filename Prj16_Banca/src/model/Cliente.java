@@ -1,15 +1,24 @@
 package model;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+
 public class Cliente {
 
 	private String nome;
 	private String cognome;
 	private int eta;
+	private LocalDate dataNascita;
 	
-	public Cliente(String nome, String cognome, int eta) {
+	public Cliente(String nome, String cognome, String data) {
 		this.nome = nome;
 		this.cognome = cognome;
-		this.eta = eta;
+		this.dataNascita = LocalDate.parse(data);
+		
+		LocalDate stop = LocalDate.now(ZoneId.of("Europe/Rome"));
+		long years = java.time.temporal.ChronoUnit.YEARS.between(dataNascita, stop);
+		
+		this.eta = (int) years;
 	}
 
 	public String getNome() {
